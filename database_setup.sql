@@ -71,7 +71,7 @@ SELECT
     SUM(CASE WHEN a.account_type = 'Expense' THEN l.amount ELSE 0 END) AS Net_Profit
 FROM general_ledger l
 INNER JOIN chart_of_accounts a ON l.account_id = a.account_id;
-
+   
 -- View D: Real-Time Balance Sheet Snapshot
 CREATE VIEW vw_balance_sheet AS
 SELECT
